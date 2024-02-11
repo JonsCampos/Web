@@ -1,0 +1,66 @@
+.navestilo {
+    background-color: #b53831;
+}
+
+.corlinknav {
+    color: white;
+}
+
+.corlinknav:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.menu-dir {
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+
+.imgprinc {
+    border-style: solid;
+    border-radius: 7px;
+}
+
+.h3qsomos {
+    background-color: #b53831;
+    color: white;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.txtmissaobjtv {
+    text-align: justify;
+}
+
+.imgradius {
+    border-radius: 10%;
+}
+
+.rodape {
+    background-color: #b53831;
+    color: white;
+    text-align: center;
+}
+
+@media only screen {
+    #menu-lista {
+        display: flex;
+    }
+
+    #menu-burguer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 576px) {
+    #menu-lista {
+        display: none;
+    }
+
+    #menu-burguer {
+        display: flex;
+    }
+}
