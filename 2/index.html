@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jonas Campos e Riguel Nascimento">
+    <title>Consulta CEP e FIPE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+        <div class="container text-white">
+            <div class="row py-2">
+                <div class="col d-flex justify-content-center align-items-center">
+                    Informações para seguro de carros
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12 col-xl-6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-6 offset-md-3 mt-3 d-flex justify-content-center align-items-center">
+                                    <h4>Consulta CEP</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 offset-md-3 mt-3 d-flex align-items-center">
+                                    <input type="text" id="cep" class="form-control bd-radius-1"
+                                        placeholder="Digite o CEP">
+                                    <button class="btn btn-dark bd-radius-2" id="localizarcep">Buscar</button>
+                                </div>
+                            </div>
+                            <div id="showCep">
+                                <div class="col-md-6 offset-md-3 my-3">
+                                    <label for="endereco">
+                                        <p class="d-inline fw-bold">Endereço</p>
+                                    </label>
+                                    <input type="text" id="endereco" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6 offset-md-3 my-3">
+                                    <label for="bairro">
+                                        <p class="d-inline fw-bold">Bairro</p>
+                                    </label>
+                                    <input type="text" id="bairro" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6 offset-md-3 my-3">
+                                    <label for="cidade">
+                                        <p class="d-inline fw-bold">Cidade</p>
+                                    </label>
+                                    <input type="text" id="cidade" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6 offset-md-3 my-3">
+                                    <label for="estado">
+                                        <p class="d-inline fw-bold">Estado</p>
+                                    </label>
+                                    <input type="text" id="estado" class="form-control" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-6 offset-md-3 mt-3 d-flex justify-content-center align-items-center">
+                                    <h4>Consulta Tabela FIPE</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 offset-md-3 mt-3 d-flex align-items-center">
+                                    <input type="text" id="codtabela" class="form-control bd-radius-1"
+                                        placeholder="Digite o Código">
+                                    <button class="btn btn-dark bd-radius-2" id="buscarcod">Buscar</button>
+                                </div>
+                            </div>
+                            <div class="row" id="showAno">
+                                <div class="col-md-6 offset-md-3 mt-4">
+                                    <select id="selects" class="form-select">
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="showHideFipe" class="mb-5">
+                                <div class="col-md-6 offset-md-3 my-3">
+                                    <label for="tipo">
+                                        <p class="d-inline fw-bold">Tipo do Veiculo</p>
+                                    </label>
+                                    <input type="text" id="tipo" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6 offset-md-3 my-3">
+                                    <label for="marca">
+                                        <p class="d-inline fw-bold">Marca</p>
+                                    </label>
+                                    <input type="text" id="marca" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6 offset-md-3 my-3">
+                                    <label for="modelo">
+                                        <p class="d-inline fw-bold">Modelo</p>
+                                    </label>
+                                    <input type="text" id="modelo" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6 offset-md-3 my-3">
+                                    <label for="combustivel">
+                                        <p class="d-inline fw-bold">Combustivel</p>
+                                    </label>
+                                    <input type="text" id="combustivel" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6 offset-md-3 my-3">
+                                    <label for="valor">
+                                        <p class="d-inline fw-bold">Valor</p>
+                                    </label>
+                                    <input type="text" id="valor" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6 offset-md-3 my-3">
+                                    <label for="mesref">
+                                        <p class="d-inline fw-bold">Mês de Referência</p>
+                                    </label>
+                                    <input type="text" id="mesref" class="form-control" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

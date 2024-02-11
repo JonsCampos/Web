@@ -1,0 +1,19 @@
+#showCep {
+    display: none;
+}
+
+#showAno {
+    display: none;
+}
+
+#showHideFipe {
+    display: none;
+}
+
+.bd-radius-1 {
+    border-radius: 0.375rem 0 0 0.375rem;
+}
+
+.bd-radius-2 {
+    border-radius: 0 0.375rem 0.375rem 0;
+}
